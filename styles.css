@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ===== HEADER ===== */
+.top-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background-color: white;
+    border-bottom: solid;
+}
+
+.left-menu a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.left-menu a:hover {
+    color: orange;
+}
+
+.center-search input {
+    width: 300px;
+    padding: 8px;
+    border-radius: 20px;
+    border: solid;
+}
+
+/* ===== LOGIN & REGISTER ===== */
+.right-auth button {
+    margin-left: 10px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.login-btn {
+    background-color: white;
+    color: orange;
+    border: solid;
+}
+
+.register-btn {
+    background-color: orange;
+    color: white;
+}
+
+/* ===== MAIN LAYOUT ===== */
+.main-container {
+    display: flex;
+    padding: 30px;
+    background-color: whitesmoke;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    width: 250px;
+    background-color: lightblue;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ===== FULL BACKGROUND IMAGE ===== */
+html, body {
+    height: 100%;
+}
+
+body {
+    background-image: url("image4.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* ===== HEADER ===== */
+.top-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background-color: white;
+    border-bottom: solid;
+}
+
+.left-menu a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.left-menu a:hover {
+    color: orange;
+}
+
+.center-search input {
+    width: 300px;
+    padding: 8px;
+    border-radius: 20px;
+    border: solid;
+}
+
+/* ===== LOGIN & REGISTER ===== */
+.right-auth button {
+    margin-left: 10px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.login-btn {
+    background-color: white;
+    color: orange;
+    border: solid;
+}
+
+.register-btn {
+    background-color: orange;
+    color: white;
+}
+
+/* ===== MAIN LAYOUT ===== */
+.main-container {
+    display: flex;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.85); /* transparent white */
+    border-radius: 15px;
+}
+
+/* ===== SIDEBAR (MADE BIGGER) ===== */
+.sidebar {
+    width: 320px;              /* increased size */
+    min-height: 100vh;         /* full height */
+    background-color: lightblue;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 18px;             /* bigger buttons */
+    margin-bottom: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.sidebar li:hover {
+    background-color: blue;
+    color: white;
+}
+
+.sidebar li.active {
+    background-color: blue;
+    color: white;
+}
+
+/* ===== CONTENT AREA ===== */
+.content {
+    flex: 1;
+    margin-left: 30px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+/* ===== INFO BOX ===== */
+.info-box {
+    background-color: lightyellow;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* ===== OPTIONS BUTTONS ===== */
+.options {
+    margin-top: 15px;
+}
+
+.options button {
+    margin: 8px;
+    padding: 10px 16px;
+    border-radius: 20px;
+    border: solid;
+    background-color: white;
+    cursor: pointer;
+}
+
+.options button:hover {
+    background-color: orange;
+    color: white;
+}
+
+/* ===== NEXT BUTTON ===== */
+.next-btn {
+    text-align: right;
+    margin-top: 30px;
+}
+
+.next-btn button {
+    padding: 10px 25px;
+    background-color: orange;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ===== STEP PAGES ===== */
+.step-page {
+    display: none;
+}
+
+.step-page.active {
+    display: block;
+}
+
+/* ===== NAV BUTTONS ===== */
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+#backBtn {
+    background-color: white;
+    color: black;
+    border: solid;
+    padding: 10px 20px;
+}
+
+#nextBtn {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+}
+
+/* ===== SIDEBAR STEP ACTIVE ===== */
+.sidebar .active {
+    background-color: blue;
+    color: white;
+}
+#nextBtn,
+#finishBtn {
+    display: none;
+}
+
+.options button.selected {
+    background-color: orange;
+    color: white;
+}
+
+
+

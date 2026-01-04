@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Career Details</title>
+    <link rel="stylesheet" href="ccareer.css">
+</head>
+<body>
+
+<h1 id="career-title"></h1>
+<div class="content" id="career-content"></div>
+
+<!-- BUTTONS -->
+<div class="btn-container">
+    <button onclick="goBack()">⬅ Back to Results</button>
+    <button class="course-btn" onclick="goToCourses()">View Courses ➜</button>
+</div>
+
+<!-- POPUP FOR LOGIN/EMAIL -->
+<div class="popup" id="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">×</span>
+        <h2>Enter your credentials</h2>
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="submitPopup()">Submit</button>
+    </div>
+</div>
+
+<script>
+const career = localStorage.getItem("career");
+const title = document.getElementById("career-title");
+const content = document.getElementById("career-content");
+
+/* ================= CAREER DATA ================= */
+const careerData = {
+    "Software Engineer": {
+        about: "Software Engineers develop applications and system software.",
+        skills: ["Java / Python / C++", "Data Structures", "Problem Solving"],
+        path: "Junior Engineer → Senior Engineer → Architect"
+    },
+    "Web Developer": {
+        about: "Web Developers create websites and web applications.",
+        skills: ["HTML, CSS, JavaScript", "React / Node"],
+        path: "Frontend → Full Stack → Lead Developer"
+    },
+    "UI / UX Designer": {
+        about: "Designers focus on user-friendly interfaces.",
+        skills: ["Figma", "User Research"],
+        path: "Junior Designer → Product Designer"
+    },
+    "Bank Officer": {
+        about: "Bank Officers manage accounts and banking services.",
+        skills: ["Accounting", "Customer Handling"],
+        path: "Clerk → Officer → Branch Manager"
+    },
+    "Financial Analyst": {
+        about: "Analyze financial data and investments.",
+        skills: ["Excel", "Financial Modeling"],
+        path: "Analyst → Senior Analyst"
+    },
+    "Investment Banker": {
+        about: "Handle large investments and capital markets.",
+        skills: ["Finance", "Risk Analysis"]
+    },
+    "Medical Lab Technician": {
+        about: "Perform laboratory diagnostic tests.",
+        skills: ["Lab Techniques", "Sample Handling"]
+    },
+    "Healthcare Administrator": {
+        about: "Manage hospitals and healthcare systems.",
+        skills: ["Management", "Communication"]
+    },
+    "Clinical Research Associate": {
+        about: "Conduct medical trials and research.",
+        skills: ["Research", "Documentation"]
+    },
+    "Startup Founder": {
+        about: "Build innovative businesses.",
+        skills: ["Leadership", "Marketing"]
+    },
+    "Business Consultant": {
+        about: "Guide businesses for growth."
+    },
+    "Product Manager": {
+        about: "Manage product lifecycle."
+    },
+    "Production Engineer": {
+        about: "Optimize manufacturing processes."
+    },
+    "Quality Control Engineer": {
+        about: "Ensure quality standards."
+    },
+    "Operations Manager": {
+        about: "Oversee operations and production."
+    }
+};
+
+// Load content dynamically
+if(careerData[career]){
+    const data = careerData[career];
+    title.innerText = career;
+    content.innerHTML = `
+        <h2>About</h2>
+        <p>${data.about}</p>
+        ${data.skills ? `<h2>Skills</h2><ul>${data.skills.map(s=>`<li>${s}</li>`).join('')}</ul>` : ""}
+        ${data.path ? `<h2>Career Path</h2><p>${data.path}</p>` : ""}
+    `;
+} else {
+    title.innerText = "Career Not Found";
+    content.innerHTML = "<p>Please go back and select a career.</p>";
+}
+
+// NAV FUNCTIONS
+function goBack(){ window.location.href = "result.html"; }
+function goToCourses(){
+    localStorage.setItem("career", career);
+    window.location.href = "courses.html";
+}
+
+// POPUP FUNCTIONS
+function openPopup(){ document.getElementById("popup").style.display="flex"; }
+function closePopup(){ document.getElementById("popup").style.display="none"; }
+function submitPopup(){
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    if(email && password){
+        alert("Credentials submitted!");
+        closePopup();
+    } else alert("Enter both email & password");
+}
+</script>
+</body>
+</html>
